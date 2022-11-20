@@ -4,4 +4,4 @@ requests
 streamlit
 streamlit_lottie
 sklearn
-pickle
+
