@@ -5,6 +5,8 @@ import pickle
 import json
 from streamlit_lottie import st_lottie as stl
 import requests as r
+import sklearn
+
 def ll(url):
     R=r.get(url)
     if R.status_code != 200:
