@@ -92,7 +92,9 @@ st.write("""
 
                  """)
 
-prompt=st.text_input("Enter the book name",placeholder='eg. Homeport, Summer Pleasures ')
+# prompt=st.text_input("Enter the book name",placeholder='eg. Homeport, Summer Pleasures ')
+prompt=st.selectbox("Enter the book name",df["Title"].unique())
+
         # st.write("----")
         
 
