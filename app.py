@@ -15,8 +15,31 @@ def ll(url):
     return R.json()
 
 ll1=ll("https://assets1.lottiefiles.com/packages/lf20_ybiszbil.json")
-st.set_page_config("Recommendation System",layout="wide",page_icon="📚")
+st.set_page_config("recommender system",layout="wide",page_icon="📚")
+def hide_streamlit_elements():
+    # Hide Streamlit "Powered by Streamlit" footer
+    st.markdown(
+        """
+        <style>
+            .viewerBadge_container__1QSob {
+                display: none !important;
+            }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
 
+    # Hide top-right corner information
+    st.markdown(
+        """
+        <style>
+            .toolbarContainer {
+                visibility: hidden;
+            }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
 
 sidebar=st.sidebar
 with sidebar:
@@ -112,7 +135,7 @@ fun(new)
 #     ll2=ll("https://assets8.lottiefiles.com/packages/lf20_Q895iE.json")
 #     stl(ll2,height=250)
     
-
+hide_streamlit_elements()
 
 import streamlit as st
 
