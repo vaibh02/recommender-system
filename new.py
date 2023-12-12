@@ -153,7 +153,43 @@ with left:
 
         fun(new)
 
+
+
+
 with right:
     ll2=ll("https://assets8.lottiefiles.com/packages/lf20_Q895iE.json")
     stl(ll2,height=250)
-    
+
+import streamlit as st
+
+page_bg_img = '''
+<style>
+[data-testid="stAppViewContainer"] {
+background-image: url("a.jpg");
+background-size: cover;
+}
+</style>
+'''
+st.markdown(page_bg_img, unsafe_allow_html=True)
+
+hide_st_style = '''
+<style> footer {visibility: hidden;} 
+</style>
+'''
+st.markdown(hide_st_style, unsafe_allow_html=True)
+
+footer_html = """
+<style>
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    color: white; /* Text color */
+    padding: 10px;
+    text-align: center; /* Center the text */
+    font-size: 18px; /* Adjust the font size */
+}
+</style>
+<div class="footer">Made by Vipul Malyan</div>
+"""
+st.markdown(footer_html, unsafe_allow_html=True)

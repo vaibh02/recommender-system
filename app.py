@@ -6,6 +6,7 @@ import json
 from streamlit_lottie import st_lottie as stl
 import requests as r
 import sklearn
+# import base64
 
 def ll(url):
     R=r.get(url)
@@ -111,3 +112,41 @@ fun(new)
 #     ll2=ll("https://assets8.lottiefiles.com/packages/lf20_Q895iE.json")
 #     stl(ll2,height=250)
     
+
+
+import streamlit as st
+
+background_image = './a.jpg'
+    # Add some custom styles to set the background image
+st.markdown(
+    f"""
+        <style>
+            body {{
+                background-image: url('{background_image}');
+                background-size: cover;
+            }}
+        </style>
+        """,
+    unsafe_allow_html=True
+)
+hide_st_style = '''
+<style> footer {visibility: hidden;} 
+</style>
+'''
+st.markdown(hide_st_style, unsafe_allow_html=True)
+
+footer_html = """
+<style>
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    color: white; /* Text color */
+    padding: 10px;
+    text-align: center; /* Center the text */
+    font-size: 18px; /* Adjust the font size */
+}
+</style>
+<div class="footer"></div>
+"""
+st.markdown(footer_html, unsafe_allow_html=True)
